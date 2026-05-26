@@ -28,14 +28,9 @@ export RUSTMAILER_REST_CLI_BASE_URL=http://your-rustmailer-host:15630
 
 ## Examples
 
-Read-only operator checks:
+### Verified Commands
 
-```bash
-rustmailer-rest-cli system get-overview --output-format table
-rustmailer-rest-cli account list --output-format table
-rustmailer-rest-cli mailbox list-mailboxes --account-id 1 --output-format table
-rustmailer-rest-cli message list --account-id 1 --mailbox INBOX --output-format table
-```
+These commands were run successfully before publishing `0.1.0`.
 
 Container smoke test:
 
@@ -43,6 +38,17 @@ Container smoke test:
 docker run --rm --platform linux/amd64 -p 15630:15630 rustmailer/rustmailer:latest
 RUSTMAILER_REST_CLI_BASE_URL=http://localhost:15630 \
   rustmailer-rest-cli system get-overview --output-format json
+```
+
+Result marker: the local container returned system overview JSON.
+
+Other read-only operator checks:
+
+```bash
+rustmailer-rest-cli system get-overview --output-format table
+rustmailer-rest-cli account list --output-format table
+rustmailer-rest-cli mailbox list-mailboxes --account-id 1 --output-format table
+rustmailer-rest-cli message list --account-id 1 --mailbox INBOX --output-format table
 ```
 
 ## Notes

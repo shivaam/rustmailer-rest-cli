@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "rustmailer-rest-cli"
-version = "0.1.0"
+version = "0.1.1"
 description = "Generated RustMailer REST CLI for local/self-hosted email operator workflows"
 readme = "README.md"
 requires-python = ">=3.10"
